@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BMICalc.Views.FormPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Kalkulator BMI">
+
+    <VerticalStackLayout
+        Padding="20"
+        Spacing="20"
+        VerticalOptions="Center">
+
+        <Label Text="Podaj wagę (kg)"
+               FontSize="18" />
+
+        <Entry
+            Placeholder="np. 70"
+            Text="{Binding Weight}"
+            Keyboard="Numeric">
+        </Entry>
+
+        <Label Text="Podaj wzrost (cm)"
+               FontSize="18" />
+
+        <Entry
+            Placeholder="np. 180"
+            Text="{Binding Height}"
+            Keyboard="Numeric">
+        </Entry>
+
+        <Button
+            Text="Oblicz BMI"
+            Command="{Binding CalculateCommand}"
+            FontSize="20"
+            BackgroundColor="#007AFF"
+            TextColor="White"
+         />
+
+    </VerticalStackLayout>
+
+</ContentPage>
